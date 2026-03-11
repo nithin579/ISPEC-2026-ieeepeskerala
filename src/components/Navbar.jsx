@@ -50,11 +50,26 @@ const Navbar = () => {
             <nav id="main-nav" className={scrolled ? 'scrolled' : ''}>
                 <div className="container-fluid nav-container">
                     <div className="logo">
-                        <Link to="/" className="nav-brand" onClick={closeMenu}>
-                            <span className="brand-name">
-                                <span className="brand-i">i</span>SPEC
+                        <Link to="/" className="nav-brand" onClick={closeMenu} style={{ gap: '8px' }}>
+                            <span className="brand-name" style={{
+                                color: '#1a1a2e',
+                                fontWeight: '800',
+                                letterSpacing: '-1px',
+                                fontSize: '2rem'
+                            }}>
+                                iSPEC
                             </span>
-                            <span className="brand-year">2026</span>
+                            <span className="brand-year" style={{
+                                background: 'linear-gradient(135deg, #00a859, #00629b)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                fontWeight: '800',
+                                letterSpacing: '-1px',
+                                paddingRight: '2px',
+                                fontSize: '2rem'
+                            }}>
+                                2026
+                            </span>
                         </Link>
                     </div>
                     <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
@@ -66,13 +81,13 @@ const Navbar = () => {
                             </span>
                             <ul className={`dropdown-menu ${openDropdown === 'authors' ? 'show' : ''}`}>
                                 <li><Link to="/call-for-papers" onClick={closeMenu}>Call for Papers</Link></li>
-                                <li><Link to="/presentation-guideline" onClick={closeMenu}>Presentation Guideline</Link></li>
-                                <li><Link to="/student-support" onClick={closeMenu}>Student Support Fund</Link></li>
+                                {/* <li><Link to="/presentation-guideline" onClick={closeMenu}>Presentation Guideline</Link></li>
+                                <li><Link to="/student-support" onClick={closeMenu}>Student Support Fund</Link></li> */}
                                 <li><Link to="/important-dates" onClick={closeMenu}>Important Dates</Link></li>
                                 <li><Link to="/submission" onClick={closeMenu}>Paper Submission</Link></li>
                             </ul>
                         </li>
-                        <li className="dropdown">
+                        {/* <li className="dropdown">
                             <span className="dropdown-toggle" onClick={() => toggleDropdown('program')}>
                                 PROGRAM <i className="fas fa-chevron-down"></i>
                             </span>
@@ -81,7 +96,7 @@ const Navbar = () => {
                                 <li><a href="#" onClick={closeMenu}>Keynote Speakers</a></li>
                                 <li><a href="#" onClick={closeMenu}>Tutorial</a></li>
                             </ul>
-                        </li>
+                        </li> */}
                         <li><Link to="/registration" onClick={closeMenu}>REGISTRATION</Link></li>
                         <li><Link to="/sponsorship" onClick={closeMenu}>SPONSORSHIP</Link></li>
                         <li><Link to="/committee" onClick={closeMenu}>COMMITTEE</Link></li>

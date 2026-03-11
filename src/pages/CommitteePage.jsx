@@ -1,109 +1,179 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 
-const committeeMembers = [
-    // General Chairs
-    { title: 'Dr.', name: 'Ajith Gopi', role: 'General Chair', email: 'ajithgopi@ieee.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/e8f4fc/00629b?text=AG', borderColor: '#00629b' },
-    { title: 'Dr.', name: 'Boby Philip', role: 'General Co-Chair', email: 'boby.philip@ieee.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/e8f4fc/00629b?text=BP', borderColor: '#00629b' },
-
-    // Technical Program
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Technical Program Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/edfaf3/2e8b57?text=TP', borderColor: '#2e8b57' },
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Technical Program Co-Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/edfaf3/2e8b57?text=TP', borderColor: '#2e8b57' },
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Technical Program Co-Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/edfaf3/2e8b57?text=TP', borderColor: '#2e8b57' },
-
-    // Sponsorship & Industry
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Sponsorship Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/fff3e0/e65100?text=SC', borderColor: '#e65100' },
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Sponsorship Co-Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/fff3e0/e65100?text=SC', borderColor: '#e65100' },
-    { title: 'Mr.', name: 'XXXXXXX XXXXXX', role: 'Industry Co-Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/fff3e0/e65100?text=IC', borderColor: '#e65100' },
-
-    // Finance
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Finance Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/fce4ec/c62828?text=FC', borderColor: '#c62828' },
-
-    // Publications & Publicity
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Publications / Proceedings Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/ede7f6/4527a0?text=PC', borderColor: '#4527a0' },
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Publicity Co-Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/ede7f6/4527a0?text=PB', borderColor: '#4527a0' },
-
-    // Special Sessions
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Special Sessions Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/e8f5e9/1b5e20?text=SS', borderColor: '#1b5e20' },
-
-    // Registrations & Local Arrangements
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Registrations Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/e3f2fd/0d47a1?text=RC', borderColor: '#0d47a1' },
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Local Arrangements Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/e3f2fd/0d47a1?text=LA', borderColor: '#0d47a1' },
-
-    // Website & Students
-    { title: 'Dr.', name: 'XXXXXXX XXXXXX', role: 'Website Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/f3e5f5/6a1b9a?text=WC', borderColor: '#6a1b9a' },
-    { title: 'Mr.', name: 'XXXXXXX XXXXXX', role: 'Students Activity Co-Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/f3e5f5/6a1b9a?text=SA', borderColor: '#6a1b9a' },
-    { title: 'Ms.', name: 'XXXXXXX XXXXXX', role: 'Students Activity Co-Chair', email: 'contact@ispec2026.org', linkedin: 'https://www.linkedin.com/', img: 'https://via.placeholder.com/150/f3e5f5/6a1b9a?text=SA', borderColor: '#6a1b9a' },
+const committeeData = [
+    {
+        category: "Patrons",
+        borderColor: '#6a1b9a',
+        members: [
+            { name: 'Sameer S M', role: 'Director, IEEE Region 10' },
+            { name: 'B. S. Manoj', role: 'Chair, IEEE Kerala Section' },
+            { name: 'Mohammed Kasim', role: 'Past Chair, IEEE Kerala Section' },
+            { name: 'Suhair A', role: 'Past Chair IEEE PES Kerala Chapter' },
+        ]
+    },
+    {
+        category: "General Chairs",
+        borderColor: '#00629b',
+        members: [
+            { name: 'Ajith Gopi', role: 'Immediate Past Chair, IEEE PES Kerala Chapter' },
+            { name: 'Boby Philip', role: 'Chair, IEEE PES Kerala Chapter' },
+        ]
+    },
+    {
+        category: "Technical Program Chairs",
+        borderColor: '#2e8b57',
+        members: [
+            { name: 'Kumaravel S', role: 'Professor, Electrical Engg. Dept. NIT Calicut' },
+            { name: 'Jaison Mathew', role: 'Professor & Head, Electrical Engg. Dept. GEC Thrissur' },
+            { name: 'Sobha Manakkal', role: 'Professor & Head, Electrical Engg. Dept, NCERC' },
+        ]
+    },
+    {
+        category: "Publication Chairs",
+        borderColor: '#4527a0',
+        members: [
+            { name: 'Rahul Satheesh', role: 'Secretary IEEE PES Kerala Chapter, Assistant Professor Amrita Viswa Vidhyapeetham' },
+            { name: 'Harikumar R', role: 'Associate Professor, Electrical Engg Dept., College of Engineering Trivandrum' },
+            { name: 'Rajiv T', role: 'Professor, Electrical Engineering, College of Engineering, Trivandrum' },
+        ]
+    },
+    {
+        category: "Publicity Chairs",
+        borderColor: '#e65100',
+        members: [
+            { name: 'Nandan S', role: 'Secretary IEEE Kerala Section' },
+            { name: 'Vishnu S', role: 'Treasurer IEEE PES Kerala Chapter' },
+            { name: 'Biju S S', role: 'Retd. Deputy CE KSEB, Grant Thornton Bharat, India' },
+        ]
+    },
+    {
+        category: "Finance Chairs",
+        borderColor: '#c62828',
+        members: [
+            { name: 'Harikumar K P', role: 'Vice Chair, IEEE PES Kerala Chapter' },
+            { name: 'Sabiq P V', role: 'Treasurer, IEEE Kerala Section' },
+        ]
+    },
+    {
+        category: "International Advisory Board",
+        borderColor: '#1b5e20',
+        members: [
+            { name: 'Bikash C Pal', role: 'President Elect, IEEE Power and Energy Society' },
+            { name: 'Dean Sharafi', role: 'Treasurer, IEEE Power and Energy Society' },
+            { name: 'Nirmal Nair', role: 'Assoc. Professor, University of Auckland, New Zealand' },
+            { name: 'C.Y. Chung', role: 'President, IEEE Power and Energy Society' },
+            { name: 'Shay Bahramirad', role: 'Past President, IEEE Power and Energy Society' },
+            { name: 'Jovica V. Milanović', role: 'Vice President, Publications' },
+            { name: 'Mythili Chaganti', role: 'Vice President, Chapters & Membership' },
+            { name: 'Suhair A', role: 'Past Chair IEEE PES Kerala Chapter' },
+            { name: 'P S Chandramohanan', role: 'Past Chair IEEE PES Kerala Chapter' },
+            { name: 'Bijuna Kunju K', role: 'Past Chair IEEE PES Kerala Chapter' },
+            { name: 'Soonee Sushil Kumar', role: 'Founder CEO POSOCO (Grid India Controller)' },
+            { name: 'Vinod John', role: 'IISC Bangalore' },
+            { name: 'Gurunath Gurrala', role: 'IISC Bangalore' },
+            { name: 'Sarasij Das', role: 'IISC Bangalore' },
+            { name: 'Avik Bhattacharya', role: 'IIT Roorkee' },
+            { name: 'Sanjib Ganguly', role: 'IIT Guwahati' },
+            { name: 'Sudhakar Kumarasamy', role: 'UMPSA Malaysia' },
+            { name: 'Mohammad Rihan', role: 'Director General, National Institute of Solar Energy' },
+            { name: 'Mini Shaji Thomas', role: 'Jamia Milia Islamia' },
+            { name: 'Nilesh Modi', role: 'AEMO' },
+        ]
+    }
 ];
 
 const CommitteePage = () => {
+    // Generate initials for the avatar placeholder.
+    const getInitials = (name) => {
+        const parts = name.split(' ');
+        if (parts.length > 1) {
+            return (parts[0][0] + parts[1][0]).toUpperCase();
+        }
+        return name.slice(0, 2).toUpperCase();
+    };
+
     return (
-        <PageLayout title="Committee Members">
+        <PageLayout title="Organizing Committee">
             <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 15px' }}>
-                <div className="section-content" style={{ paddingBottom: '60px' }}>
+                <div className="section-content" style={{ paddingBottom: '80px' }}>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '30px', marginTop: '40px' }}>
-                        {committeeMembers.map((member, index) => (
-                            <div key={index} style={{
-                                position: 'relative',
-                                background: '#f8f9fa',
-                                borderRadius: '8px',
-                                padding: '90px 20px 20px',
-                                textAlign: 'center',
-                                marginTop: '75px',
-                                borderTop: `5px solid ${member.borderColor}`,
-                                boxShadow: '0 4px 6px rgba(0,0,0,0.05)'
-                            }}>
-                                {/* Floating Picture */}
-                                <div style={{
-                                    position: 'absolute',
-                                    top: '-75px',
-                                    left: '50%',
-                                    transform: 'translateX(-50%)',
-                                    width: '150px',
-                                    height: '150px',
-                                    borderRadius: '40px',
-                                    border: '4px solid #fff',
-                                    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-                                    backgroundImage: `url(${member.img})`,
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                    backgroundColor: '#ddd'
-                                }}></div>
-
-                                {/* Text Block */}
-                                <div style={{ marginTop: '10px' }}>
-                                    <div style={{ fontSize: '1.2rem', color: '#333', marginBottom: '5px' }}>
-                                        <span style={{ fontWeight: 'normal' }}>{member.title}</span> <span style={{ fontWeight: 'bold' }}>{member.name}</span>
-                                    </div>
-                                    <div style={{ fontSize: '0.95rem', color: '#00629b', fontWeight: 'bold', marginBottom: '15px' }}>
-                                        {member.role}
-                                    </div>
-
-                                    {/* Social Links */}
-                                    <div style={{ display: 'flex', justifyContent: 'center', gap: '15px' }}>
-                                        {member.email && (
-                                            <a href={`mailto:${member.email}`} title="Email" style={{ color: '#666', transition: 'color 0.3s' }}>
-                                                <i className="fa-solid fa-envelope" style={{ fontSize: '1.2rem' }}></i>
-                                            </a>
-                                        )}
-                                        {member.linkedin && (
-                                            <a href={member.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn" style={{ color: '#0077b5', transition: 'color 0.3s' }}>
-                                                <i className="fa-brands fa-linkedin" style={{ fontSize: '1.2rem' }}></i>
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                        <p style={{ fontSize: '1.1rem', color: '#555', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+                            We extend our gratitude to our esteemed committee members whose expertise and dedication make iSPEC 2026 possible.
+                        </p>
                     </div>
+
+                    {committeeData.map((group, groupIndex) => (
+                        <div key={groupIndex} style={{ marginBottom: '70px' }}>
+                            <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+                                <h3 style={{
+                                    fontSize: '1.8rem',
+                                    color: '#1a1a2e',
+                                    marginBottom: '15px',
+                                    display: 'inline-block',
+                                    borderBottom: `3px solid ${group.borderColor}`,
+                                    paddingBottom: '8px'
+                                }}>
+                                    {group.category}
+                                </h3>
+                            </div>
+
+                            <div style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+                                gap: '30px',
+                                alignItems: 'stretch'
+                            }}>
+                                {group.members.map((member, index) => (
+                                    <div key={index} className="committee-card" style={{
+                                        background: '#fff',
+                                        borderRadius: '12px',
+                                        padding: '30px',
+                                        textAlign: 'center',
+                                        border: '1px solid #eaeaea',
+                                        borderTop: `4px solid ${group.borderColor}`,
+                                        boxShadow: '0 8px 24px rgba(0,0,0,0.04)',
+                                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center'
+                                    }}>
+                                        <div style={{
+                                            width: '80px',
+                                            height: '80px',
+                                            borderRadius: '50%',
+                                            background: `${group.borderColor}15`,
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            color: group.borderColor,
+                                            fontSize: '1.5rem',
+                                            fontWeight: 'bold',
+                                            marginBottom: '20px'
+                                        }}>
+                                            {getInitials(member.name)}
+                                        </div>
+                                        <div style={{ fontSize: '1.25rem', color: '#1a1a2e', fontWeight: '700', marginBottom: '10px' }}>
+                                            {member.name}
+                                        </div>
+                                        <div style={{ fontSize: '1rem', color: '#555', lineHeight: '1.5' }}>
+                                            {member.role}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+
                 </div>
             </div>
 
             <style>{`
-                .fa-envelope:hover { color: #00629b !important; }
-                .fa-linkedin:hover { color: #004b79 !important; }
+                .committee-card:hover { 
+                    transform: translateY(-5px);
+                    box-shadow: 0 12px 30px rgba(0,0,0,0.08) !important;
+                }
             `}</style>
         </PageLayout>
     );

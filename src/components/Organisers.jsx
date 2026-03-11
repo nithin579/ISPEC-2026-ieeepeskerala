@@ -1,86 +1,26 @@
 import React from 'react';
 
 const Organisers = () => {
-    const organisers = [
-        {
-            name: 'IEEE',
-            logo: 'https://brand-experience.ieee.org/wp-content/uploads/2021/05/ieee-mb-blue-tag-png_1713x695.png',
-            url: 'https://www.ieee.org'
-        },
-        {
-            name: 'IEEE Kerala Section',
-            logo: 'https://ieeekerala.org/wp-content/uploads/2020/01/IEEE-Kerala-Section-Logo.png',
-            url: 'https://ieeekerala.org'
-        },
-        {
-            name: 'IEEE PES Kerala Chapter',
-            logo: 'https://ewh.ieee.org/r10/kerala/pes/images/logonew.png',
-            url: 'https://ewh.ieee.org/r10/kerala/pes/'
-        },
-        {
-            name: 'IEEE PES',
-            logo: 'https://www.ieee-pes.org/wp-content/uploads/2023/02/ieee_pes_logo.svg',
-            url: 'https://www.ieee-pes.org'
-        }
-    ];
-
     return (
-        <section className="section organisers-section" style={{ background: '#fff', padding: '60px 0' }}>
+        <section className="section organisers-section" style={{ background: 'rgb(255, 255, 255)', paddingTop: '60px', paddingBottom: '50px' }}>
             <div className="container">
                 <div className="section-header" style={{ textAlign: 'center', marginBottom: '40px' }}>
-                    <h2 style={{ fontSize: '2rem', color: '#333', marginBottom: '10px' }}>Organisers</h2>
-                    <div style={{ width: '60px', height: '3px', background: 'var(--primary)', margin: '0 auto' }}></div>
+                    <h2 style={{ fontSize: '2rem', color: 'rgb(51, 51, 51)', marginBottom: '10px' }}>Organisers</h2>
+                    <div style={{ width: '60px', height: '3px', background: 'var(--primary)', margin: '0px auto' }}></div>
                 </div>
-                <div style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                    gap: '40px'
-                }}>
-                    {organisers.map((org, index) => (
-                        <a
-                            key={index}
-                            href={org.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={org.name}
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: '15px 25px',
-                                background: '#f8f9fa',
-                                borderRadius: '10px',
-                                transition: 'all 0.3s ease',
-                                minWidth: '180px',
-                                minHeight: '80px',
-                                textDecoration: 'none'
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
-                                e.currentTarget.style.transform = 'translateY(-2px)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.boxShadow = 'none';
-                                e.currentTarget.style.transform = 'translateY(0)';
-                            }}
-                        >
-                            <img
-                                src={org.logo}
-                                alt={org.name}
-                                style={{
-                                    maxHeight: '50px',
-                                    maxWidth: '160px',
-                                    objectFit: 'contain'
-                                }}
-                                onError={(e) => {
-                                    e.target.style.display = 'none';
-                                    e.target.parentElement.innerHTML = `<span style="font-family: 'Outfit', sans-serif; font-weight: 600; color: #00629b; font-size: 0.9rem; text-align: center;">${org.name}</span>`;
-                                }}
-                            />
-                        </a>
-                    ))}
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '40px' }}>
+                    <a href="https://www.ieee.org" target="_blank" rel="noopener noreferrer" title="IEEE" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '15px 25px', background: 'rgb(248, 249, 250)', borderRadius: '10px', transition: '0.3s', minWidth: '180px', minHeight: '80px', textDecoration: 'none' }}>
+                        <span style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, color: '#00629b', fontSize: '0.9rem', textAlign: 'center' }}>IEEE</span>
+                    </a>
+                    <a href="https://ieeekerala.org" target="_blank" rel="noopener noreferrer" title="IEEE Kerala Section" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '15px 25px', background: 'rgb(248, 249, 250)', borderRadius: '10px', transition: '0.3s', minWidth: '180px', minHeight: '80px', textDecoration: 'none', boxShadow: 'none', transform: 'translateY(0px)' }}>
+                        <span style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, color: '#00629b', fontSize: '0.9rem', textAlign: 'center' }}>IEEE Kerala Section</span>
+                    </a>
+                    <a href="https://ewh.ieee.org/r10/kerala/pes/" target="_blank" rel="noopener noreferrer" title="IEEE PES Kerala Chapter" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '15px 25px', background: 'rgb(248, 249, 250)', borderRadius: '10px', transition: '0.3s', minWidth: '180px', minHeight: '80px', textDecoration: 'none', boxShadow: 'none', transform: 'translateY(0px)' }}>
+                        <span style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, color: '#00629b', fontSize: '0.9rem', textAlign: 'center' }}>IEEE PES Kerala Chapter</span>
+                    </a>
+                    <a href="https://www.ieee-pes.org" target="_blank" rel="noopener noreferrer" title="IEEE PES" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '15px 25px', background: 'rgb(248, 249, 250)', borderRadius: '10px', transition: '0.3s', minWidth: '180px', minHeight: '80px', textDecoration: 'none', boxShadow: 'none', transform: 'translateY(0px)' }}>
+                        <span style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, color: '#00629b', fontSize: '0.9rem', textAlign: 'center' }}>IEEE PES</span>
+                    </a>
                 </div>
             </div>
         </section>

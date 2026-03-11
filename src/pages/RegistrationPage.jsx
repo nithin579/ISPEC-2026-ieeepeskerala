@@ -43,9 +43,7 @@ const feeGroups = [
     {
         id: 'nonpresenter', label: '👤 Non-Presenters',
         rows: [
-            { name: 'Non-Presenter PES Member', ebIn: 'XXXXX', ebFo: 'XXXXX', stIn: 'XXXXX', stFo: 'XXXXX' },
-            { name: 'Non-Presenter IEEE Member', ebIn: 'XXXXX', ebFo: 'XXXXX', stIn: 'XXXXX', stFo: 'XXXXX' },
-            { name: 'Non-Presenter Non-IEEE Member', ebIn: 'XXXXX', ebFo: 'XXXXX', stIn: 'XXXXX', stFo: 'XXXXX' },
+            { name: 'Delegate Registration', ebIn: '₹ 7,000', ebFo: '200 USD', stIn: '₹ 7,000', stFo: '200 USD' },
         ]
     },
 ];
@@ -82,22 +80,7 @@ const FeeTable = () => {
             <div style={{ border: '1px solid #e0e0e0', borderRadius: '10px', overflow: 'hidden', overflowX: 'auto' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center', backgroundColor: '#fff', minWidth: '700px' }}>
                     <thead>
-                        <tr style={{ backgroundColor: '#00629b', color: '#fff' }}>
-                            <th rowSpan={2} style={{ padding: '14px 15px', borderBottom: '2px solid #004a7c', borderRight: '1px solid #004a7c', textAlign: 'left', fontWeight: 'bold', minWidth: '220px' }}>
-                                Categories
-                            </th>
-                            <th colSpan={2} style={{ padding: '14px 15px', borderBottom: '1px solid #004a7c', borderRight: '1px solid #004a7c', fontWeight: 'bold' }}>
-                                Early Bird<br /><span style={{ fontSize: '0.78rem', fontWeight: 'normal' }}>Before 15 Sep 2026</span>
-                            </th>
-                            <th colSpan={2} style={{ padding: '14px 15px', borderBottom: '1px solid #004a7c', fontWeight: 'bold' }}>
-                                Standard<br /><span style={{ fontSize: '0.78rem', fontWeight: 'normal' }}>16 Sep – 1 Nov 2026</span>
-                            </th>
-                        </tr>
-                        <tr style={{ backgroundColor: '#004b79', color: '#fff' }}>
-                            {['Indian Delegates', 'Foreign Delegates', 'Indian Delegates', 'Foreign Delegates'].map((h, i) => (
-                                <th key={i} style={{ padding: '9px 12px', borderBottom: '2px solid #004a7c', fontWeight: '600', fontSize: '0.85rem', ...(i === 1 ? { borderRight: '1px solid #004a7c' } : {}) }}>{h}</th>
-                            ))}
-                        </tr>
+                        {/* Headers removed as requested */}
                     </thead>
                     <tbody>
                         {feeGroups.map((group) => (
@@ -144,17 +127,7 @@ const FeeTable = () => {
                             </React.Fragment>
                         ))}
 
-                        {/* Add-ons — always visible */}
-                        <tr style={{ backgroundColor: '#fffde7' }}>
-                            <td colSpan={5} style={{ padding: '12px 15px', textAlign: 'left', fontWeight: 'bold', color: '#7a6000', fontSize: '0.97rem', borderTop: '2px solid #f9e400' }}>
-                                🍽️ *Add-on Gala Dinner (companion) — XXXXX
-                            </td>
-                        </tr>
-                        <tr style={{ backgroundColor: '#f3f0ff' }}>
-                            <td colSpan={5} style={{ padding: '12px 15px', textAlign: 'left', fontWeight: 'bold', color: '#4a3b8c', fontSize: '0.97rem', borderTop: '2px solid #c5b8ff' }}>
-                                🔬 Technical Visit – Green Energy Testbed — XXXXX
-                            </td>
-                        </tr>
+                        {/* Add-ons removed as requested */}
                     </tbody>
                 </table>
             </div>
