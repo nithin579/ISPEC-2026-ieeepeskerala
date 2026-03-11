@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="footer-isdt-style" style={{ backgroundColor: '#002845', color: '#fff', paddingTop: '60px', paddingBottom: '20px', marginTop: '50px' }}>
+        <footer className="footer-isdt-style" style={{ backgroundColor: 'rgb(0, 40, 69)', color: 'rgb(255, 255, 255)', paddingTop: '60px', paddingBottom: '20px', marginTop: '0px' }}>
             <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 15px' }}>
 
                 {/* 4 Column Top Section */}

@@ -4,6 +4,11 @@ import ImportantDates from '../components/ImportantDates';
 import Organisers from '../components/Organisers';
 
 const importantDates = [
+    {
+        date: '20th March 2026',
+        label: <><span style={{ backgroundColor: '#2e8b57', color: 'white', padding: '2px 6px', borderRadius: '4px', fontSize: '0.7rem', marginRight: '6px', verticalAlign: 'middle' }}>NEW</span>Paper submission open from 20 March 2026</>,
+        icon: 'fa-calendar-plus'
+    },
     { date: '15 August 2026', label: 'Full Paper Submission Deadline', icon: 'fa-file-alt' },
     { date: '30 September 2026', label: 'Notification of Acceptance', icon: 'fa-bell' },
     { date: '15 October 2026', label: 'Camera Ready / Final Paper Deadline', icon: 'fa-check-circle' },
@@ -111,32 +116,7 @@ const HomePage = () => {
                                     </p>
                                 </div>
 
-                                {/* Diversity Statement */}
-                                <div style={{
-                                    background: 'transparent',
-                                    padding: '0 20px',
-                                    display: 'flex',
-                                    alignItems: 'flex-start',
-                                    gap: '20px'
-                                }}>
-                                    <div style={{
-                                        width: '40px', height: '40px',
-                                        borderRadius: '50%',
-                                        background: '#e8fdf2',
-                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        color: '#2e8b57', fontSize: '1.1rem', flexShrink: 0, marginTop: '5px'
-                                    }}>
-                                        <i className="fas fa-globe"></i>
-                                    </div>
-                                    <p style={{
-                                        fontSize: '1rem', lineHeight: '1.7', color: '#666',
-                                        fontStyle: 'italic', margin: 0
-                                    }}>
-                                        The IEEE Power &amp; Energy Society is committed to advancing diversity in Power and Energy, and to promoting an inclusive and equitable culture that welcomes, engages, and rewards all who contribute to the field, without regard to ethnicity, religion, gender, disability, age, national origin, sexual orientation, gender identity, or gender expression.
-                                    </p>
-                                </div>
-
-                            </div>
+                                {/* Diversity statement removed */}                            </div>
                         </div>
                     </div>
 
@@ -253,7 +233,6 @@ const HomePage = () => {
                     </div>
 
                     {/* Recovered Sections */}
-                    <ImportantDates />
                     <Organisers />
 
                     {/* Close the overlapping container */}

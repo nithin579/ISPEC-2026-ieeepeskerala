@@ -2,6 +2,11 @@ import React from 'react';
 
 const ImportantDates = () => {
     const dates = [
+        {
+            label: <><span style={{ backgroundColor: '#2e8b57', color: 'white', padding: '2px 6px', borderRadius: '4px', fontSize: '0.7rem', marginRight: '6px', verticalAlign: 'middle' }}>NEW</span>Paper submission open from 20 March 2026</>,
+            date: '20th March 2026',
+            status: 'active'
+        },
         { label: 'Full Paper Submission Deadline', date: '15 August 2026', status: 'active' },
         { label: 'Notification of Acceptance', date: '30 September 2026', status: 'future' },
         { label: 'Final Paper Submission', date: '15 October 2026', status: 'future' },

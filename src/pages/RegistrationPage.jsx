@@ -43,9 +43,7 @@ const feeGroups = [
     {
         id: 'nonpresenter', label: '👤 Non-Presenters',
         rows: [
-            { name: 'Non-Presenter PES Member', ebIn: 'XXXXX', ebFo: 'XXXXX', stIn: 'XXXXX', stFo: 'XXXXX' },
-            { name: 'Non-Presenter IEEE Member', ebIn: 'XXXXX', ebFo: 'XXXXX', stIn: 'XXXXX', stFo: 'XXXXX' },
-            { name: 'Non-Presenter Non-IEEE Member', ebIn: 'XXXXX', ebFo: 'XXXXX', stIn: 'XXXXX', stFo: 'XXXXX' },
+            { name: 'Delegate Registration', ebIn: '₹ 7,000', ebFo: '200 USD', stIn: '₹ 7,000', stFo: '200 USD' },
         ]
     },
 ];
@@ -82,22 +80,7 @@ const FeeTable = () => {
             <div style={{ border: '1px solid #e0e0e0', borderRadius: '10px', overflow: 'hidden', overflowX: 'auto' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center', backgroundColor: '#fff', minWidth: '700px' }}>
                     <thead>
-                        <tr style={{ backgroundColor: '#00629b', color: '#fff' }}>
-                            <th rowSpan={2} style={{ padding: '14px 15px', borderBottom: '2px solid #004a7c', borderRight: '1px solid #004a7c', textAlign: 'left', fontWeight: 'bold', minWidth: '220px' }}>
-                                Categories
-                            </th>
-                            <th colSpan={2} style={{ padding: '14px 15px', borderBottom: '1px solid #004a7c', borderRight: '1px solid #004a7c', fontWeight: 'bold' }}>
-                                Early Bird<br /><span style={{ fontSize: '0.78rem', fontWeight: 'normal' }}>Before 15 Sep 2026</span>
-                            </th>
-                            <th colSpan={2} style={{ padding: '14px 15px', borderBottom: '1px solid #004a7c', fontWeight: 'bold' }}>
-                                Standard<br /><span style={{ fontSize: '0.78rem', fontWeight: 'normal' }}>16 Sep – 1 Nov 2026</span>
-                            </th>
-                        </tr>
-                        <tr style={{ backgroundColor: '#004b79', color: '#fff' }}>
-                            {['Indian Delegates', 'Foreign Delegates', 'Indian Delegates', 'Foreign Delegates'].map((h, i) => (
-                                <th key={i} style={{ padding: '9px 12px', borderBottom: '2px solid #004a7c', fontWeight: '600', fontSize: '0.85rem', ...(i === 1 ? { borderRight: '1px solid #004a7c' } : {}) }}>{h}</th>
-                            ))}
-                        </tr>
+                        {/* Headers removed as requested */}
                     </thead>
                     <tbody>
                         {feeGroups.map((group) => (
@@ -144,17 +127,7 @@ const FeeTable = () => {
                             </React.Fragment>
                         ))}
 
-                        {/* Add-ons — always visible */}
-                        <tr style={{ backgroundColor: '#fffde7' }}>
-                            <td colSpan={5} style={{ padding: '12px 15px', textAlign: 'left', fontWeight: 'bold', color: '#7a6000', fontSize: '0.97rem', borderTop: '2px solid #f9e400' }}>
-                                🍽️ *Add-on Gala Dinner (companion) — XXXXX
-                            </td>
-                        </tr>
-                        <tr style={{ backgroundColor: '#f3f0ff' }}>
-                            <td colSpan={5} style={{ padding: '12px 15px', textAlign: 'left', fontWeight: 'bold', color: '#4a3b8c', fontSize: '0.97rem', borderTop: '2px solid #c5b8ff' }}>
-                                🔬 Technical Visit – Green Energy Testbed — XXXXX
-                            </td>
-                        </tr>
+                        {/* Add-ons removed as requested */}
                     </tbody>
                 </table>
             </div>
@@ -332,20 +305,20 @@ const RegistrationPage = () => {
                 <div style={{ height: '1px', background: '#e0e0e0', margin: '40px 0' }}></div>
 
                 {/* Terms & Conditions */}
-                <section style={{ marginBottom: '20px' }}>
-                    <h2 style={{ fontSize: '2rem', color: '#00629b', marginBottom: '30px', fontWeight: 'bold', borderBottom: '3px solid #2e8b57', paddingBottom: '12px' }}>
+                <section style={{ marginBottom: '20px', textAlign: 'center' }}>
+                    <h2 style={{ fontSize: '2rem', color: '#00629b', marginBottom: '30px', fontWeight: 'bold', borderBottom: '3px solid #2e8b57', paddingBottom: '12px', display: 'inline-block' }}>
                         Terms &amp; Conditions
                     </h2>
-                    <div style={{ background: '#fff8e1', border: '1px solid #ffe082', borderRadius: '10px', padding: '20px 25px', marginBottom: '30px' }}>
+                    <div style={{ background: '#fff8e1', border: '1px solid #ffe082', borderRadius: '10px', padding: '20px 25px', marginBottom: '30px', maxWidth: '800px', margin: '0 auto 30px' }}>
                         <p style={{ margin: 0, fontSize: '1.05rem', color: '#444', lineHeight: '1.7' }}>
                             <strong>⚠️ Important:</strong> At least one author of each accepted paper must register. Each registration covers a maximum of <strong>two (2) papers</strong>, with a limit of <strong>6 pages per paper</strong>. Each additional page incurs <strong>XXXXX INR</strong> per page. Payment deadline: <strong>1 November 2026</strong>.
                         </p>
                     </div>
 
                     {tcSections.map(({ title, body }, i) => (
-                        <div key={i} style={{ marginBottom: '28px' }}>
-                            <h3 style={{ fontSize: '1.3rem', color: '#00629b', marginBottom: '12px', fontWeight: 'bold', borderLeft: '4px solid #2e8b57', paddingLeft: '10px' }}>{title}</h3>
-                            <div style={{ fontSize: '1.02rem', color: '#444', lineHeight: '1.7', paddingLeft: '14px' }}>{body}</div>
+                        <div key={i} style={{ marginBottom: '28px', maxWidth: '800px', margin: '0 auto 28px' }}>
+                            <h3 style={{ fontSize: '1.3rem', color: '#00629b', marginBottom: '12px', fontWeight: 'bold' }}>{title}</h3>
+                            <div style={{ fontSize: '1.02rem', color: '#444', lineHeight: '1.7' }}>{body}</div>
                         </div>
                     ))}
                 </section>
