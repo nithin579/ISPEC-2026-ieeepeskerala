@@ -28,7 +28,7 @@ const Hero = () => {
       {/* ── MAIN CONTENT ── */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 py-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Visionary Branding */}
           <div className="lg:col-span-7">
             <motion.div
@@ -37,16 +37,16 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
             >
               <span className="hero-label text-emerald-500 mb-4 block">{conferenceInfo.subtitle}</span>
-              <motion.h1 
+              <motion.h1
                 className="text-white text-6xl md:text-8xl lg:text-9xl font-black mb-6 leading-none tracking-tighter"
-                animate={{ 
+                animate={{
                   scale: [1, 1.02, 1],
                   filter: ['brightness(1)', 'brightness(1.2)', 'brightness(1)']
                 }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
                 }}
               >
                 iSPEC <span className="text-emerald-500">2026</span>
@@ -94,7 +94,7 @@ const Hero = () => {
                     CALL FOR PAPERS
                   </button>
                 </Link>
-                
+
                 <Link to="/about" className="w-full">
                   <button className="hero-btn-secondary w-full">
                     DISCOVER MORE
