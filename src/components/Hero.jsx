@@ -11,7 +11,7 @@ const Hero = () => {
     subtitle: 'IEEE PES Kerala Chapter',
     theme: 'Empowering a Sustainable Future Through Green Technology and Systems Innovation.',
     date: 'Dec 4 – 6, 2026',
-    venue: 'Hyatt Regency, Trivandrum'
+    venue: 'Thiruvananthapuram, Kerala'
   };
 
   return (
