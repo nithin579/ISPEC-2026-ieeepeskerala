@@ -110,7 +110,7 @@ const CallForPapersPage = () => {
 
                     <div style={{ marginBottom: '40px' }}>
                         <h2 style={{ fontSize: '1.5rem', color: '#00629b', marginBottom: '20px', lineHeight: '1.4' }}>
-                            Theme: Integrated Pathways in Sustainable Power and Energy for Carbon Neutrality
+                            Theme: "Integrated Pathways in Sustainable Power and Energy for Carbon Neutrality"
                         </h2>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '30px 0' }}>
                             <div style={{ flex: 1, height: '3px', background: '#ccc' }}></div>
