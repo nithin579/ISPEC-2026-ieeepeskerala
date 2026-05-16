@@ -88,7 +88,7 @@ const HomePage = () => {
                                         The <strong style={{ color: '#00629b' }}>IEEE Sustainable Power and Energy Conference (iSPEC) 2026</strong> is a premier international forum that brings together researchers, engineers, policymakers, and industry leaders from across the globe to present and discuss the latest advances in <strong>power systems</strong>, <strong>energy technologies</strong>, and <strong>sustainable solutions</strong>.
                                     </p>
                                     <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#333', margin: 0, fontWeight: '400' }}>
-                                        In 2026, the IEEE iSPEC will be hosted at the iconic <strong>Hyatt Regency Trivandrum, Kerala</strong>. Organized by the <strong>IEEE Power &amp; Energy Society (PES) Kerala Chapter</strong> in association with <strong>IEEE Kerala Section</strong>, iSPEC 2026 promises to be a landmark event in the energy sector, offering a unique opportunity to deepen our understanding of sustainable energy through cross-disciplinary collaboration in an inspiring environment.
+                                        The IEEE iSPEC, organized by the <strong>IEEE Power &amp; Energy Society (PES) Kerala Chapter</strong> in association with the <strong>IEEE Kerala Section</strong>, promises to be a landmark event in the energy sector, offering a unique opportunity to deepen our understanding of sustainable energy through cross-disciplinary collaboration in an inspiring environment.
                                     </p>
                                 </div>
                             </div>
