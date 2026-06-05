@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import cfpPdf from '../assets/cfp 2.2.pdf';
 
 const tracks = [
     {
@@ -128,6 +129,24 @@ const CallForPapersPage = () => {
                                     <p style={{ margin: '0 0 15px 0' }}>The IEEE Sustainable Power and Energy Conference (iSPEC) 2026 will be held at Mar Baselios College of Engineering and Technology, Thiruvananthapuram, Keralam, India under the theme "Integrated Pathways in Sustainable Power and Energy for Carbon Neutrality"</p>
                                     <p style={{ margin: '0 0 15px 0' }}>The conference brings together researchers, industry professionals, utilities, policymakers, and educators to exchange ideas and showcase advances in power and energy systems, with a focus on sustainability, digitalization, resilience, and system-level innovation.</p>
                                     <p style={{ margin: '0 0 15px 0' }}>The technical program will include keynote speeches, panel sessions, tutorials, and peer-reviewed paper and poster presentations, highlighting both research breakthroughs and practical applications. With seven technical tracks delivered over three days, iSPEC 2026 provides a dynamic platform for knowledge sharing, collaboration, and professional development.</p>
+                                </div>
+                                <div style={{ marginTop: '25px', marginBottom: '10px' }}>
+                                    <a href={cfpPdf} download="iSPEC_2026_Call_For_Papers.pdf" style={{ 
+                                        display: 'inline-flex', 
+                                        alignItems: 'center', 
+                                        gap: '10px', 
+                                        textDecoration: 'none',
+                                        background: '#00629b',
+                                        color: 'white',
+                                        padding: '12px 24px',
+                                        borderRadius: '8px',
+                                        fontWeight: 'bold',
+                                        transition: 'background 0.3s'
+                                    }}
+                                    onMouseEnter={(e) => e.currentTarget.style.background = '#004a7c'}
+                                    onMouseLeave={(e) => e.currentTarget.style.background = '#00629b'}>
+                                        <i className="fas fa-file-pdf"></i> Download Call for Papers PDF
+                                    </a>
                                 </div>
                             </div>
 
