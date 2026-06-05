@@ -6,6 +6,7 @@ import ieeeLogo from '../assets/ieee.png';
 import ieeePesLogo from '../assets/ieee-pes.png';
 import ieeePesKcLogo from '../assets/ieee-pes-kc.png';
 import ieeeKsLogo from '../assets/ieee-ks.png';
+import marbaseliosLogo from '../assets/marbaselioslogo.png';
 
 const importantDates = [
     {
@@ -172,6 +173,9 @@ const HomePage = () => {
                                         </a>
                                         <a href="https://ewh.ieee.org/r10/kerala/pes/" target="_blank" rel="noreferrer" style={{ transition: 'opacity 0.2s', opacity: 0.85 }} onMouseEnter={e => e.target.style.opacity = 1} onMouseLeave={e => e.target.style.opacity = 0.85}>
                                             <img src={ieeePesKcLogo} alt="IEEE PES Kerala Chapter" style={{ height: '85px', width: 'auto', objectFit: 'contain' }} />
+                                        </a>
+                                        <a href="https://mbcet.ac.in/" target="_blank" rel="noreferrer" style={{ transition: 'opacity 0.2s', opacity: 0.85 }} onMouseEnter={e => e.target.style.opacity = 1} onMouseLeave={e => e.target.style.opacity = 0.85}>
+                                            <img src={marbaseliosLogo} alt="Mar Baselios College" style={{ height: '128px', width: 'auto', objectFit: 'contain' }} />
                                         </a>
                                     </div>
                                 </div>

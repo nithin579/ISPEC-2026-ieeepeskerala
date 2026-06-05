@@ -30,7 +30,7 @@ const Hero = () => {
     subtitle: 'IEEE PES Kerala Chapter',
     theme: '"Integrated Pathways in Sustainable Power and Energy for Carbon Neutrality"',
     date: 'Dec 4 – 6, 2026',
-    venue: 'Thiruvananthapuram, Kerala'
+    venue: 'Mar Baselios College of Engineering and Technology, Thiruvananthapuram, Keralam , India'
   };
 
   return (
